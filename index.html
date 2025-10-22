@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to HamCode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent hover:from-blue-700 hover:to-blue-800 transition cursor-pointer" id="logoLink">HamCode</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#experience" class="text-gray-700 hover:text-blue-600 font-medium transition">Experience</a>
+                    <a href="#education" class="text-gray-700 hover:text-blue-600 font-medium transition">Education</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 font-medium transition">Skills</a>
+                    <a href="#why-group" class="text-gray-700 hover:text-blue-600 font-medium transition">Why Group?</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium transition">Pricing</a>
+                </div>
+                <button class="md:hidden p-2 text-white hover:bg-white/20 rounded-lg transition" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed inset-0 top-16 bg-white z-40 md:hidden">
+        <div class="px-4 py-6 space-y-4">
+            <a href="#experience" class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition">Experience</a>
+            <a href="#education" class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition">Education</a>
+            <a href="#skills" class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition">Skills</a>
+            <a href="#why-group" class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition">Why Group?</a>
+            <a href="#pricing" class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition">Pricing</a>
+            <div class="border-t pt-4 mt-4">
+                <a href="#how-to-get-started" class="block px-4 py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transition text-center">Join Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add padding to account for fixed nav -->
+    <div class="h-16"></div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center text-white relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800" id="heroSection">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+        <div class="text-center px-4 max-w-3xl relative z-10">
+            <div class="mb-8 animate-scale-in">
+                <div class="inline-block p-1 bg-gradient-to-r from-white/20 to-white/10 rounded-full backdrop-blur-md">
+                    <img src="images/profile.jpeg" alt="Hamid" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-2xl object-cover">
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in leading-tight">
+                👋 Hi, I'm Hamid
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-blue-100 leading-relaxed max-w-2xl mx-auto animate-slide-in-up">
+                I started coding over 10 years ago with C, then discovered my passion for web development.
+                For years, I've taught 1-on-1 online, helping students master JavaScript, Laravel, and more.
+                Now, I'm launching a <strong>Group Mentorship Program</strong> to scale impact and create a real team learning experience.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#how-to-get-started" class="btn-primary inline-block">
+                    Join Now
+                </a>
+                <a href="#how-it-works" class="btn-secondary inline-block">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">💪 My Experience</h2>
+
+            <!-- Teaching & Expertise -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition-all">
+                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-4">10+</div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Years of Coding</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Started with low-level languages like C, then transitioned to web development with CSS, JavaScript, jQuery, PHP, and Go.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition-all">
+                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-4">100+</div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Teaching Sessions</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        For JavaScript and Laravel alone, I've taught over 100 sessions each! I know these topics inside-out.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition-all">
+                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-4">🏆</div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Proven Track Record</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Continuously improving lesson structures and focusing on practical, hands-on knowledge.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Professional Experience Timeline -->
+            <h3 class="text-3xl font-bold mb-12 text-gray-900">Professional Journey</h3>
+            <div class="relative pl-8 md:pl-12">
+                <!-- Timeline line -->
+                <div class="absolute left-2 md:left-5 top-0 bottom-0 w-1 bg-gray-300"></div>
+
+                <!-- Timeline items -->
+                <div class="space-y-8">
+                    <!-- FBK -->
+                    <div class="relative group">
+                        <div class="absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md bg-blue-600 group-hover:scale-125 transition-transform"></div>
+                        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition border-l-4" style="border-left-color: #1e3a8a;">
+                            <div class="flex items-start gap-4 mb-3">
+                                <img src="images/companies/fbk.jpeg" alt="FBK" class="w-12 h-12 object-contain flex-shrink-0">
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900">Software Developer</h4>
+                                    <p class="font-semibold" style="color: #1e3a8a;">Fondazione Bruno Kessler (FBK)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-2">Trento, Italy</p>
+                            <p class="text-gray-700 mb-3">Skills: Kubernetes, GitLab CI, and more</p>
+                            <p class="text-xs font-semibold" style="color: #1e3a8a;">May 2023 - Present</p>
+                        </div>
+                    </div>
+
+                    <!-- JAJIGA -->
+                    <div class="relative group">
+                        <div class="absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md bg-red-600 group-hover:scale-125 transition-transform"></div>
+                        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition border-l-4" style="border-left-color: #dc2626;">
+                            <div class="flex items-start gap-4 mb-3">
+                                <img src="images/companies/jajiga.jpeg" alt="JAJIGA" class="w-12 h-12 object-contain flex-shrink-0">
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900">Back-end Developer</h4>
+                                    <p class="font-semibold" style="color: #dc2626;">JAJIGA</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-2">Gilan Province, Iran</p>
+                            <p class="text-gray-700 mb-3">Skills: PHP, Open API, and more</p>
+                            <p class="text-xs font-semibold" style="color: #dc2626;">Aug 2022 - May 2023</p>
+                        </div>
+                    </div>
+
+                    <!-- Anzalifood -->
+                    <div class="relative group">
+                        <div class="absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform" style="background-color: #e91e63;"></div>
+                        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition border-l-4" style="border-left-color: #e91e63;">
+                            <div class="flex items-start gap-4 mb-3">
+                                <img src="images/companies/anzalifood.jpeg" alt="Anzalifood" class="w-12 h-12 object-contain flex-shrink-0">
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900">Co-Founder</h4>
+                                    <p class="font-semibold" style="color: #e91e63;">Anzalifood</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-2">Bandar-e Anzali, Iran</p>
+                            <p class="text-gray-700 mb-3">4 years of entrepreneurial experience</p>
+                            <p class="text-xs font-semibold" style="color: #e91e63;">Aug 2018 - Aug 2022</p>
+                        </div>
+                    </div>
+
+                    <!-- Chitasoft -->
+                    <div class="relative group">
+                        <div class="absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform" style="background-color: #5b21b6;"></div>
+                        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition border-l-4" style="border-left-color: #5b21b6;">
+                            <div class="flex items-start gap-4 mb-3">
+                                <img src="images/companies/chitasoft.jpeg" alt="Chitasoft" class="w-12 h-12 object-contain flex-shrink-0">
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900">Back-end Developer</h4>
+                                    <p class="font-semibold" style="color: #5b21b6;">Chitasoft</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-2">Tehran, Iran</p>
+                            <p class="text-gray-700 mb-3">4 months of backend development</p>
+                            <p class="text-xs font-semibold" style="color: #5b21b6;">Jan 2017 - Apr 2017</p>
+                        </div>
+                    </div>
+
+                    <!-- Viraco -->
+                    <div class="relative group">
+                        <div class="absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform" style="background-color: #0d9488;"></div>
+                        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition border-l-4" style="border-left-color: #0d9488;">
+                            <div class="flex items-start gap-4 mb-3">
+                                <img src="images/companies/vira.jpeg" alt="Viraco" class="w-12 h-12 object-contain flex-shrink-0">
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-gray-900">Back-end Developer (Part-time)</h4>
+                                    <p class="font-semibold" style="color: #0d9488;">Viraco</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-2">Zanjan, Iran</p>
+                            <p class="text-gray-700 mb-3">1 year 10 months of part-time backend development</p>
+                            <p class="text-xs font-semibold" style="color: #0d9488;">Jan 2015 - Oct 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">🎓 Education</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card-modern border-t-4" style="border-top-color: #7c2d12;">
+                    <div class="flex gap-4 mb-6">
+                        <img src="images/universities/iasbs.jpeg" alt="IASBS" class="w-16 h-16 object-contain flex-shrink-0">
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-900">Master of Science</h3>
+                            <p class="font-semibold text-lg" style="color: #7c2d12;">Computer Science</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-2">Institute for Advanced Studies in Basic Sciences</p>
+                    <p class="text-gray-600 mb-4">Zanjan, Iran</p>
+                    <p class="text-sm font-semibold text-gray-500">Sep 2017 - Sep 2020</p>
+                </div>
+
+                <div class="card-modern border-t-4" style="border-top-color: #001f3f;">
+                    <div class="flex gap-4 mb-6">
+                        <img src="images/universities/du.jpeg" alt="Damghan University" class="w-16 h-16 object-contain flex-shrink-0">
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-900">Bachelor of Science</h3>
+                            <p class="font-semibold text-lg" style="color: #001f3f;">Computer Science</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-2">Damghan University</p>
+                    <p class="text-gray-600 mb-4">Damghan, Iran</p>
+                    <p class="text-sm font-semibold text-gray-500">Sep 2011 - Jun 2015</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">🛠️ Technologies & Skills</h2>
+
+            <!-- Frontend -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                    <span class="inline-block w-2 h-2 bg-blue-600 rounded-full"></span>
+                    Frontend Development
+                </h3>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/CSS3.svg" alt="CSS3" class="w-16 h-16 mb-2 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">CSS3</p>
+                    </a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/JavaScript.svg" alt="JavaScript" class="w-16 h-16 mb-2 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">JavaScript</p>
+                    </a>
+                    <a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/TypeScript.svg" alt="TypeScript" class="w-16 h-16 mb-2 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">TypeScript</p>
+                    </a>
+                    <a href="https://angular.io/docs" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/Angular.svg" alt="Angular" class="w-16 h-16 mb-2 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">Angular</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                    <span class="inline-block w-2 h-2 bg-green-600 rounded-full"></span>
+                    Backend Development
+                </h3>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
+                    <a href="https://www.php.net/docs.php" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/PHP.svg" alt="PHP" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">PHP</p>
+                    </a>
+                    <a href="https://laravel.com/docs" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/Laravel.svg" alt="Laravel" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">Laravel</p>
+                    </a>
+                    <a href="https://symfony.com/doc" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/Symfony.svg" alt="Symfony" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">Symfony</p>
+                    </a>
+                    <a href="https://golang.org/doc" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/Go.svg" alt="Go" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">Go</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                    <span class="inline-block w-2 h-2 bg-red-600 rounded-full"></span>
+                    Databases
+                </h3>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
+                    <a href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/PostgresSQL.svg" alt="PostgreSQL" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">PostgreSQL</p>
+                    </a>
+                    <a href="https://docs.mongodb.com/" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/MongoDB.svg" alt="MongoDB" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">MongoDB</p>
+                    </a>
+                    <a href="https://redis.io/documentation" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/Redis.svg" alt="Redis" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">Redis</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- DevOps & Tools -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                    <span class="inline-block w-2 h-2 bg-purple-600 rounded-full"></span>
+                    DevOps & Tools
+                </h3>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
+                    <a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/Visual Studio Code (VS Code).svg" alt="VS Code" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">VS Code</p>
+                    </a>
+                    <a href="https://linux.die.net/" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/Linux.svg" alt="Linux" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">Linux</p>
+                    </a>
+                    <a href="https://git-scm.com/doc" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/Git.svg" alt="Git" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">Git</p>
+                    </a>
+                    <a href="https://docs.github.com/" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/GitHub.svg" alt="GitHub" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">GitHub</p>
+                    </a>
+                    <a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/Docker.svg" alt="Docker" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">Docker</p>
+                    </a>
+                    <a href="https://www.terraform.io/docs" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/HashiCorp Terraform.svg" alt="Terraform" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">Terraform</p>
+                    </a>
+                    <a href="https://kubernetes.io/docs/" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/Kubernetes.svg" alt="Kubernetes" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">Kubernetes</p>
+                    </a>
+                    <a href="https://www.rabbitmq.com/documentation.html" target="_blank" rel="noopener noreferrer" class="card-modern flex flex-col items-center justify-center h-32 group hover:scale-105">
+                        <img src="images/technologies/RabbitMQ.svg" alt="RabbitMQ" class="w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                        <p class="text-sm font-semibold text-gray-700 text-center">RabbitMQ</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Group Mentorship Section -->
+    <section id="why-group" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-6 text-gray-900">🚀 Why Switch to Group Mentorship?</h2>
+            <p class="text-center text-gray-600 text-lg mb-12 max-w-3xl mx-auto">
+                1-on-1 sessions have limitations that group mentorship solves:
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card-modern bg-gradient-to-br from-red-50 to-red-100/30 border-l-4 border-red-400">
+                    <p class="text-red-700 font-bold text-lg mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                        1-on-1 Limitations
+                    </p>
+                    <ul class="text-gray-700 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold mt-1">•</span>
+                            <span>Tutor might forget to cover something</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold mt-1">•</span>
+                            <span>Scheduling sessions is complicated</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold mt-1">•</span>
+                            <span>Same concepts repeated for every student</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold mt-1">•</span>
+                            <span>Limited time for independent practice</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-modern bg-gradient-to-br from-green-50 to-green-100/30 border-l-4 border-green-400">
+                    <p class="text-green-700 font-bold text-lg mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Group Mentorship Benefits
+                    </p>
+                    <ul class="text-gray-700 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Diverse team (frontend, backend, DevOps, designers)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Regular team meetings for progress sharing</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Real-world project collaboration</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Learn Git, Trello, and professional tools</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Independent work on project components</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Motivation from peers learning together</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Build your developer network</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 px-4 bg-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">🧠 How It Works</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold text-lg">1</div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Join our Telegram group</h3>
+                            <p class="text-gray-600 mt-2">Connect with your cohort and get started</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold text-lg">2</div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Study the resources</h3>
+                            <p class="text-gray-600 mt-2">Learn from curated materials and documentation</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold text-lg">3</div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Choose a task</h3>
+                            <p class="text-gray-600 mt-2">Pick from our project board based on your interests</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold text-lg">4</div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Submit & Get Feedback</h3>
+                            <p class="text-gray-600 mt-2">Receive feedback from teammates and mentor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="text-6xl mb-4">✨</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Learn by Doing</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        It's that simple — not just watching, but actively building and learning through real-world projects.
+                        Every task completed is a step toward mastering your craft.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Get Started Section -->
+    <section id="how-to-get-started" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">🚀 How to Get Started</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="card-modern bg-gradient-to-br from-blue-50 to-blue-100/50 border-2 border-blue-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send me a message on Telegram</h3>
+                    <p class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-6">@hamcode_net</p>
+                    <p class="text-gray-700 font-semibold mb-4">Answer these questions:</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-bold">1.</span>
+                            <span>What do you want to learn? (language, framework, tool)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-bold">2.</span>
+                            <span>How much time can you dedicate daily?</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-bold">3.</span>
+                            <span>Build your own project or get hired?</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-bold">4.</span>
+                            <span>How long do you plan to reach that goal?</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-modern bg-gradient-to-br from-green-50 to-green-100/50 border-2 border-green-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">What Happens Next?</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold text-green-700 mb-2">📅 Intro Meeting</p>
+                            <p class="text-gray-700">Schedule a short intro call on Google Meet</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-green-700 mb-2">🤝 Get to Know the Team</p>
+                            <p class="text-gray-700">Meet your mentor and cohort members</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-green-700 mb-2">🎯 Get Started</p>
+                            <p class="text-gray-700">If everything feels right, you'll join our team!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">💰 Pricing</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-modern relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-blue-700/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="relative">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Group Mentorship</h3>
+                        <p class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2">€90</p>
+                        <p class="text-gray-600 mb-6 font-medium">per month</p>
+                        <p class="text-gray-700 leading-relaxed">Full access to group mentorship program, projects, and team collaboration</p>
+                    </div>
+                </div>
+
+                <div class="card-modern relative overflow-hidden group border-2 border-blue-600">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-sm font-bold rounded-bl-lg">POPULAR</div>
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-blue-700/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="relative pt-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">For Iran</h3>
+                        <p class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2">€30</p>
+                        <p class="text-gray-600 mb-6 font-medium">per month</p>
+                        <p class="text-gray-700 leading-relaxed">Special pricing due to currency differences. Same program, lower cost.</p>
+                    </div>
+                </div>
+
+                <div class="card-modern relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-blue-700/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="relative">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">1-on-1 Sessions</h3>
+                        <p class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2">€10</p>
+                        <p class="text-gray-600 mb-6 font-medium">per 30 minutes</p>
+                        <p class="text-gray-700 leading-relaxed">Optional additional sessions during the program for extra guidance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-24 px-4 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 right-20 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-20 w-40 h-40 bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-3xl mx-auto relative z-10">
+            <h2 class="text-5xl font-bold mb-6 animate-fade-in">Ready to Level Up?</h2>
+            <p class="text-xl mb-10 text-blue-100 leading-relaxed">Join our group mentorship program and learn by building real projects with other developers.</p>
+            <a href="https://t.me/hamcode_net" target="_blank" class="btn-primary inline-block">
+                Start on Telegram → @hamcode_net
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <div class="card-modern bg-gradient-to-r from-gray-800 to-gray-700 border border-gray-600 p-8 text-center max-w-2xl mx-auto">
+                    <p class="text-lg text-gray-200 mb-4 flex items-center justify-center gap-2">
+                        <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                        Questions?
+                    </p>
+                    <p class="text-gray-300 mb-4">Message me on Telegram for any inquiries or support</p>
+                    <a href="https://t.me/hamcode_net" target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <p class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent hover:from-blue-300 hover:to-cyan-300 transition">@hamcode_net</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8">
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <div class="text-center">
+                        <p class="text-gray-400 mb-2">Built with</p>
+                        <p class="text-sm text-gray-500">HTML, CSS, JavaScript & Tailwind</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-gray-400 mb-2">Location</p>
+                        <p class="text-sm text-gray-500">Trento, Italy</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-gray-400 mb-2">Connect</p>
+                        <p class="text-sm text-gray-500">Telegram: @hamcode_net</p>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 pt-8 text-center">
+                    <p class="text-gray-500">© 2024 HamCode. All rights reserved.</p>
+                    <p class="text-gray-600 text-sm mt-2">Empowering developers through mentorship & learning</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
