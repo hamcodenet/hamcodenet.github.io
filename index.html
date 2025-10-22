@@ -22,7 +22,7 @@
                     <a href="#why-group" class="text-gray-700 hover:text-blue-600 font-medium transition">Why Group?</a>
                     <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium transition">Pricing</a>
                 </div>
-                <button class="md:hidden p-2 text-white hover:bg-white/20 rounded-lg transition" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                <button class="md:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition" id="mobileMenuBtn" aria-label="Toggle mobile menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -49,7 +49,7 @@
     <div class="h-16"></div>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center text-white relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800" id="heroSection">
+    <section class="py-32 flex items-center justify-center text-white relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800" id="heroSection">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
             <div class="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl"></div>
@@ -68,7 +68,7 @@
                 For years, I've taught 1-on-1 online, helping students master JavaScript, Laravel, and more.
                 Now, I'm launching a <strong>Group Mentorship Program</strong> to scale impact and create a real team learning experience.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a href="#how-to-get-started" class="btn-primary inline-block">
                     Join Now
                 </a>
@@ -76,6 +76,11 @@
                     Learn More
                 </a>
             </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-arrow">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
         </div>
     </section>
 
@@ -111,15 +116,15 @@
 
             <!-- Professional Experience Timeline -->
             <h3 class="text-3xl font-bold mb-12 text-gray-900">Professional Journey</h3>
-            <div class="relative pl-8 md:pl-12">
+            <div class="relative pl-0 md:pl-12">
                 <!-- Timeline line -->
-                <div class="absolute left-2 md:left-5 top-0 bottom-0 w-1 bg-gray-300"></div>
+                <div class="hidden md:block absolute left-2 md:left-5 top-0 bottom-0 w-1 bg-gray-300"></div>
 
                 <!-- Timeline items -->
                 <div class="space-y-8">
                     <!-- FBK -->
                     <div class="relative group">
-                        <div class="absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md bg-blue-600 group-hover:scale-125 transition-transform"></div>
+                        <div class="hidden md:block absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md bg-blue-600 group-hover:scale-125 transition-transform"></div>
                         <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition border-l-4" style="border-left-color: #1e3a8a;">
                             <div class="flex items-start gap-4 mb-3">
                                 <img src="images/companies/fbk.jpeg" alt="FBK" class="w-12 h-12 object-contain flex-shrink-0">
@@ -136,7 +141,7 @@
 
                     <!-- JAJIGA -->
                     <div class="relative group">
-                        <div class="absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md bg-red-600 group-hover:scale-125 transition-transform"></div>
+                        <div class="hidden md:block absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md bg-red-600 group-hover:scale-125 transition-transform"></div>
                         <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition border-l-4" style="border-left-color: #dc2626;">
                             <div class="flex items-start gap-4 mb-3">
                                 <img src="images/companies/jajiga.jpeg" alt="JAJIGA" class="w-12 h-12 object-contain flex-shrink-0">
@@ -153,7 +158,7 @@
 
                     <!-- Anzalifood -->
                     <div class="relative group">
-                        <div class="absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform" style="background-color: #e91e63;"></div>
+                        <div class="hidden md:block absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform" style="background-color: #e91e63;"></div>
                         <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition border-l-4" style="border-left-color: #e91e63;">
                             <div class="flex items-start gap-4 mb-3">
                                 <img src="images/companies/anzalifood.jpeg" alt="Anzalifood" class="w-12 h-12 object-contain flex-shrink-0">
@@ -170,7 +175,7 @@
 
                     <!-- Chitasoft -->
                     <div class="relative group">
-                        <div class="absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform" style="background-color: #5b21b6;"></div>
+                        <div class="hidden md:block absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform" style="background-color: #5b21b6;"></div>
                         <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition border-l-4" style="border-left-color: #5b21b6;">
                             <div class="flex items-start gap-4 mb-3">
                                 <img src="images/companies/chitasoft.jpeg" alt="Chitasoft" class="w-12 h-12 object-contain flex-shrink-0">
@@ -187,12 +192,12 @@
 
                     <!-- Viraco -->
                     <div class="relative group">
-                        <div class="absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform" style="background-color: #0d9488;"></div>
+                        <div class="hidden md:block absolute -left-6 md:-left-9 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform" style="background-color: #0d9488;"></div>
                         <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition border-l-4" style="border-left-color: #0d9488;">
                             <div class="flex items-start gap-4 mb-3">
                                 <img src="images/companies/vira.jpeg" alt="Viraco" class="w-12 h-12 object-contain flex-shrink-0">
                                 <div class="flex-1">
-                                    <h4 class="text-xl font-bold text-gray-900">Back-end Developer (Part-time)</h4>
+                                    <h4 class="text-xl font-bold text-gray-900">Back-end Developer</h4>
                                     <p class="font-semibold" style="color: #0d9488;">Viraco</p>
                                 </div>
                             </div>
@@ -515,7 +520,9 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="card-modern bg-gradient-to-br from-blue-50 to-blue-100/50 border-2 border-blue-200">
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">Send me a message on Telegram</h3>
-                    <p class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-6">@hamcode_net</p>
+                    <a href="https://t.me/hamcode_net" target="_blank" rel="noopener noreferrer" class="inline-block mb-6">
+                        <p class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent hover:from-blue-700 hover:to-blue-800 transition">@hamcode_net</p>
+                    </a>
                     <p class="text-gray-700 font-semibold mb-4">Answer these questions:</p>
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start gap-3">
@@ -642,7 +649,7 @@
                     </div>
                     <div class="text-center">
                         <p class="text-gray-400 mb-2">Connect</p>
-                        <p class="text-sm text-gray-500">Telegram: @hamcode_net</p>
+                        <p class="text-sm text-gray-500">Telegram: <a href="https://t.me/hamcode_net" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 transition">@hamcode_net</a></p>
                     </div>
                 </div>
 
