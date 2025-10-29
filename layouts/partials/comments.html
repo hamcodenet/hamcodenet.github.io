@@ -9,52 +9,9 @@
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="bottom"
-        data-theme="preferred_color_scheme"
+        data-theme="light"
         data-lang="en"
         data-loading="lazy"
         crossorigin="anonymous"
         async>
-</script>
-
-<script>
-  // Function to get current theme from PaperMod
-  function getTheme() {
-    const theme = document.body.className;
-    if (theme.includes('dark')) {
-      return 'dark';
-    }
-    return 'light';
-  }
-
-  // Function to send theme change message to giscus
-  function setGiscusTheme() {
-    const theme = getTheme();
-    const iframe = document.querySelector('iframe.giscus-frame');
-    if (!iframe) return;
-
-    iframe.contentWindow.postMessage(
-      { giscus: { setConfig: { theme: theme } } },
-      'https://giscus.app'
-    );
-  }
-
-  // Watch for theme changes
-  const observer = new MutationObserver(() => {
-    setGiscusTheme();
-  });
-
-  // Start observing body class changes
-  observer.observe(document.body, {
-    attributes: true,
-    attributeFilter: ['class']
-  });
-
-  // Update theme when giscus loads
-  window.addEventListener('message', (event) => {
-    if (event.origin !== 'https://giscus.app') return;
-    if (!(typeof event.data === 'object' && event.data.giscus)) return;
-
-    // giscus is ready, set the initial theme
-    setGiscusTheme();
-  });
 </script>

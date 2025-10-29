@@ -17,6 +17,8 @@ theme = 'PaperMod'
   showBreadCrumbs = true
   showCodeCopyButtons = true
   comments = true
+  defaultTheme = "light"
+  disableThemeToggle = true
 
 [params.homeInfoParams]
   Title = "Welcome to HamCode!"
