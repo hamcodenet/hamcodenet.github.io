@@ -1,0 +1,42 @@
+baseURL = 'https://hamcode.net/'
+languageCode = 'en-us'
+title = 'HamCode'
+theme = 'PaperMod'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "Welcome to HamCode"
+  author = "Hamid"
+  showReadingTime = true
+  showShareButtons = false
+  showPostNavLinks = true
+  showBreadCrumbs = true
+  showCodeCopyButtons = true
+  comments = true
+
+[params.homeInfoParams]
+  Title = "Welcome to HamCode!"
+  Content = "Where I share my public notes :)"
+
+[params.label]
+  text = "HamCode"
+  icon = "/favicon.ico"
+  iconHeight = 35
+
+[params.cover]
+  linkFullImages = true
+  responsiveImages = true
+
+[params.editPost]
+  URL = "https://github.com/hamcodenet/hamcodenet.github.io/tree/master/content"
+  Text = "Suggest Changes"
+  appendFilePath = true
+
+[[menu.main]]
+  name = "About me"
+  url = "/about/"
+  weight = 2
