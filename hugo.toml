@@ -24,6 +24,22 @@ theme = 'PaperMod'
   Title = "Welcome to HamCode!"
   Content = "Where I share my public notes :)"
 
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/hamidhaghdoost"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/hamid-haghdoost"
+
+[[params.socialIcons]]
+  name = "stackoverflow"
+  url = "https://stackoverflow.com/users/3361796/hamid-haghdoost"
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:hamidcs92@gmail.com"
+
 [params.label]
   text = "HamCode"
   icon = "/favicon.ico"
