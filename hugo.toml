@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'HamCode'
 theme = 'PaperMod'
 
+[services.googleAnalytics]
+  ID = "G-PVD8JLP4WW"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
