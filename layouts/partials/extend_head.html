@@ -12,108 +12,159 @@
   });
 </script>
 
-<!-- Cookie Consent by Orest Bida (Free & Open Source) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.css">
-<script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.umd.js"></script>
+<!-- Simple Cookie Consent Banner -->
+<style>
+  #cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    display: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  }
+
+  #cookie-banner.show {
+    display: block;
+  }
+
+  .cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .cookie-text {
+    flex: 1;
+    min-width: 300px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .cookie-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .cookie-btn-accept {
+    background: #27ae60;
+    color: white;
+  }
+
+  .cookie-btn-accept:hover {
+    background: #229954;
+  }
+
+  .cookie-btn-reject {
+    background: #95a5a6;
+    color: white;
+  }
+
+  .cookie-btn-reject:hover {
+    background: #7f8c8d;
+  }
+
+  @media (max-width: 768px) {
+    .cookie-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .cookie-buttons {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<div id="cookie-banner">
+  <div class="cookie-content">
+    <div class="cookie-text">
+      🍪 This website uses cookies to enhance your experience and analyze site traffic. By clicking "Accept", you consent to the use of analytics cookies.
+    </div>
+    <div class="cookie-buttons">
+      <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Reject</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Accept</button>
+    </div>
+  </div>
+</div>
 
 <script>
-  window.addEventListener('load', function() {
-    // Wait for cookieconsent to be available
-    if (typeof initCookieConsent === 'undefined') {
-      console.error('CookieConsent library not loaded');
-      return;
+  // Check if user has already made a choice
+  function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+  }
+
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
     }
-    // Initialize Cookie Consent
-    var cc = initCookieConsent();
+    document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+  }
 
-    cc.run({
-      current_lang: 'en',
-      autoclear_cookies: true,
-      page_scripts: true,
-
-      onFirstAction: function(user_preferences, cookie) {
-        // Update Google Consent Mode based on user choice
-        if (user_preferences.accepted_categories.includes('analytics')) {
-          gtag('consent', 'update', {
-            'analytics_storage': 'granted'
-          });
-        }
-      },
-
-      onChange: function(cookie, changed_categories) {
-        // Update consent when user changes preferences
-        if (changed_categories.includes('analytics')) {
-          if (cc.allowedCategory('analytics')) {
-            gtag('consent', 'update', {
-              'analytics_storage': 'granted'
-            });
-          } else {
-            gtag('consent', 'update', {
-              'analytics_storage': 'denied'
-            });
-          }
-        }
-      },
-
-      languages: {
-        'en': {
-          consent_modal: {
-            title: 'We use cookies!',
-            description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
-            primary_btn: {
-              text: 'Accept all',
-              role: 'accept_all'
-            },
-            secondary_btn: {
-              text: 'Reject all',
-              role: 'accept_necessary'
-            }
-          },
-          settings_modal: {
-            title: 'Cookie preferences',
-            save_settings_btn: 'Save settings',
-            accept_all_btn: 'Accept all',
-            reject_all_btn: 'Reject all',
-            close_btn_label: 'Close',
-            blocks: [
-              {
-                title: 'Cookie usage',
-                description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want.'
-              },
-              {
-                title: 'Strictly necessary cookies',
-                description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly.',
-                toggle: {
-                  value: 'necessary',
-                  enabled: true,
-                  readonly: true
-                }
-              },
-              {
-                title: 'Analytics cookies',
-                description: 'These cookies allow the website to remember the choices you have made in the past and collect information about how you use the website to help improve it.',
-                toggle: {
-                  value: 'analytics',
-                  enabled: false,
-                  readonly: false
-                }
-              }
-            ]
-          }
-        }
-      },
-
-      gui_options: {
-        consent_modal: {
-          layout: 'cloud',
-          position: 'bottom center',
-          transition: 'slide'
-        },
-        settings_modal: {
-          layout: 'box',
-          transition: 'slide'
-        }
-      }
+  function acceptCookies() {
+    // Update consent mode
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
     });
+
+    // Save user choice
+    setCookie('cookie_consent', 'accepted', 365);
+
+    // Hide banner
+    document.getElementById('cookie-banner').classList.remove('show');
+  }
+
+  function rejectCookies() {
+    // Keep consent denied (default)
+    gtag('consent', 'update', {
+      'analytics_storage': 'denied'
+    });
+
+    // Save user choice
+    setCookie('cookie_consent', 'rejected', 365);
+
+    // Hide banner
+    document.getElementById('cookie-banner').classList.remove('show');
+  }
+
+  // Show banner if no consent has been given
+  window.addEventListener('load', function() {
+    var consent = getCookie('cookie_consent');
+
+    if (!consent) {
+      // No consent recorded, show banner
+      document.getElementById('cookie-banner').classList.add('show');
+    } else if (consent === 'accepted') {
+      // User previously accepted, grant consent
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+    }
+    // If rejected, consent stays denied (default)
   });
 </script>
