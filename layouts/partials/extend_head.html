@@ -14,10 +14,15 @@
 
 <!-- Cookie Consent by Orest Bida (Free & Open Source) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.css">
-<script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.umd.js"></script>
 
-<script defer>
+<script>
   window.addEventListener('load', function() {
+    // Wait for cookieconsent to be available
+    if (typeof initCookieConsent === 'undefined') {
+      console.error('CookieConsent library not loaded');
+      return;
+    }
     // Initialize Cookie Consent
     var cc = initCookieConsent();
 
