@@ -7,6 +7,11 @@ theme = 'PaperMod'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    style = 'dracula'
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = true
 
 [params]
   description = "Welcome to HamCode"
@@ -53,6 +58,11 @@ theme = 'PaperMod'
   URL = "https://github.com/hamcodenet/hamcodenet.github.io/tree/master/content"
   Text = "Suggest Changes"
   appendFilePath = true
+
+[[menu.main]]
+  name = "Mentorship"
+  url = "/mentorship/"
+  weight = 1
 
 [[menu.main]]
   name = "About me"
