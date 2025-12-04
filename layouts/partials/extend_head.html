@@ -1,0 +1,114 @@
+<!-- Google Consent Mode (v2) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Default consent to 'denied' as per GDPR
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+
+<!-- Cookie Consent by Orest Bida (Free & Open Source) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.css">
+<script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.umd.js"></script>
+
+<script defer>
+  window.addEventListener('load', function() {
+    // Initialize Cookie Consent
+    var cc = initCookieConsent();
+
+    cc.run({
+      current_lang: 'en',
+      autoclear_cookies: true,
+      page_scripts: true,
+
+      onFirstAction: function(user_preferences, cookie) {
+        // Update Google Consent Mode based on user choice
+        if (user_preferences.accepted_categories.includes('analytics')) {
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+          });
+        }
+      },
+
+      onChange: function(cookie, changed_categories) {
+        // Update consent when user changes preferences
+        if (changed_categories.includes('analytics')) {
+          if (cc.allowedCategory('analytics')) {
+            gtag('consent', 'update', {
+              'analytics_storage': 'granted'
+            });
+          } else {
+            gtag('consent', 'update', {
+              'analytics_storage': 'denied'
+            });
+          }
+        }
+      },
+
+      languages: {
+        'en': {
+          consent_modal: {
+            title: 'We use cookies!',
+            description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
+            primary_btn: {
+              text: 'Accept all',
+              role: 'accept_all'
+            },
+            secondary_btn: {
+              text: 'Reject all',
+              role: 'accept_necessary'
+            }
+          },
+          settings_modal: {
+            title: 'Cookie preferences',
+            save_settings_btn: 'Save settings',
+            accept_all_btn: 'Accept all',
+            reject_all_btn: 'Reject all',
+            close_btn_label: 'Close',
+            blocks: [
+              {
+                title: 'Cookie usage',
+                description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want.'
+              },
+              {
+                title: 'Strictly necessary cookies',
+                description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly.',
+                toggle: {
+                  value: 'necessary',
+                  enabled: true,
+                  readonly: true
+                }
+              },
+              {
+                title: 'Analytics cookies',
+                description: 'These cookies allow the website to remember the choices you have made in the past and collect information about how you use the website to help improve it.',
+                toggle: {
+                  value: 'analytics',
+                  enabled: false,
+                  readonly: false
+                }
+              }
+            ]
+          }
+        }
+      },
+
+      gui_options: {
+        consent_modal: {
+          layout: 'cloud',
+          position: 'bottom center',
+          transition: 'slide'
+        },
+        settings_modal: {
+          layout: 'box',
+          transition: 'slide'
+        }
+      }
+    });
+  });
+</script>
